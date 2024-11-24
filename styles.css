@@ -1,0 +1,52 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.background {
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Блакитний градієнт зліва направо */
+    height: 100%;
+    display: flex; /* flexbox для центрування */
+    justify-content: center; /* Горизонтальне центровання */
+    align-items: center; /* Вертикальне центровання */
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2); /* Легке і елегантне хє-хє затемнення всередині елемента для глибини */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Напівпрозорий фон */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* ЕфЄкт розмиття фону */
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase; /* Великі літери */
+    letter-spacing: 3px; /* Відстань між літерами */
+    animation: fadeIn 2s ease-in-out; /* Анімація для заголовків */
+    margin: 15px 0;
+}
+
+/* Анімація для заголовків */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Початкова прозорість */
+        transform: translateY(20px); /* Зсунуто вниз */
+    }
+    100% {
+        opacity: 1; 
+        transform: translateY(0); /* Завершене положення */
+    }
+}
+
+/* Екрани шириною до 600px*/
+@media (max-width: 600px) {
+    .heading {
+        font-size: 2rem; /* Розмір шрифта для мобільних пристроїв */
+    }
+}
